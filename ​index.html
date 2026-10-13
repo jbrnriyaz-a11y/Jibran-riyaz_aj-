@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJ Store | Shop Smart • Live Better</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #0b0b0b;
+            color: #ffffff;
+        }
+
+        /* Header Styling */
+        header {
+            background-color: #121212;
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #d4af37; /* Gold Accent */
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 2px solid #d4af37;
+        }
+
+        .brand-name {
+            font-size: 1.5rem;
+            font-weight: bold;
+            letter-spacing: 1.5px;
+            background: linear-gradient(45deg, #d4af37, #ffffff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .tagline {
+            font-size: 0.75rem;
+            color: #aaaaaa;
+            letter-spacing: 1px;
+        }
+
+        /* Hero Banner */
+        .hero {
+            text-align: center;
+            padding: 50px 20px;
+            background: radial-gradient(circle, #1a1a1a 0%, #0b0b0b 100%);
+            border-bottom: 1px solid #333;
+        }
+
+        .hero h1 {
+            font-size: 2.2rem;
+            color: #d4af37;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            color: #cccccc;
+            font-size: 1rem;
+        }
+
+        /* Products Grid */
+        .container {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            font-size: 1.6rem;
+            margin-bottom: 20px;
+            border-left: 4px solid #d4af37;
+            padding-left: 10px;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .product-card {
+            background-color: #161616;
+            border: 1px solid #2a2a2a;
+            border-radius: 12px;
+            padding: 15px;
+            text-align: center;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            border-color: #d4af37;
+        }
+
+        .product-img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            background-color: #222;
+        }
+
+        .product-title {
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+        }
+
+        .product-price {
+            color: #d4af37;
+            font-size: 1.1rem;
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
+
+        .size-selector {
+            margin-bottom: 15px;
+        }
+
+        .size-selector label {
+            font-size: 0.85rem;
+            color: #aaa;
+            margin-right: 5px;
+        }
+
+        .size-selector select {
+            background-color: #222;
+            color: #fff;
+            border: 1px solid #444;
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+
+        .buy-btn {
+            background: linear-gradient(45deg, #25D366, #128C7E); /* WhatsApp Green */
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            width: 100%;
+            border-radius: 6px;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 0.95rem;
+            transition: opacity 0.2s;
+        }
+
+        .buy-btn:hover {
+            opacity: 0.9;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 25px;
+            background-color: #121212;
+            border-top: 1px solid #222;
+            margin-top: 50px;
+            color: #777;
+            font-size: 0.85rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="logo-container">
+            <!-- Aapka Logo yahan load hoga -->
+            <img src="logo.png" alt="AJ Store Logo" class="logo-img">
+            <div>
+                <div class="brand-name">AJ STORE</div>
+                <div class="tagline">SHOP SMART • LIVE BETTER</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Banner Section -->
+    <section class="hero">
+        <h1>Exclusive Streetwear & Fashion</h1>
+        <p>Premium Quality Apparel by Arhaan & Jibran</p>
+    </section>
+
+    <!-- Main Products Section -->
+    <div class="container">
+        <h2 class="section-title">New Collection</h2>
+        
+        <div class="product-grid">
+
+            <!-- Product 1 -->
+            <div class="product-card">
+                <img src="https://via.placeholder.com/300x350/222/FFF?text=Black+Oversized+Tee" alt="Black Hoodie" class="product-img">
+                <h3 class="product-title">Black Oversized Tee</h3>
+                <div class="product-price">₹799</div>
+                
+                <div class="size-selector">
+                    <label>Size:</label>
+                    <select id="size1">
+                        <option>S</option>
+                        <option>M</option>
+                        <option>L</option>
+                        <option>XL</option>
+                    </select>
+                </div>
+
+                <button class="buy-btn" onclick="orderOnWhatsApp('Black Oversized Tee', '799', 'size1')">
+                    Buy via WhatsApp
+                </button>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-card">
+                <img src="https://via.placeholder.com/300x350/222/FFF?text=Cyber+Edition+Hoodie" alt="Cyber Hoodie" class="product-img">
+                <h3 class="product-title">Cyber Edition Hoodie</h3>
+                <div class="product-price">₹1,499</div>
+                
+                <div class="size-selector">
+                    <label>Size:</label>
+                    <select id="size2">
+                        <option>M</option>
+                        <option>L</option>
+                        <option>XL</option>
+                    </select>
+                </div>
+
+                <button class="buy-btn" onclick="orderOnWhatsApp('Cyber Edition Hoodie', '1499', 'size2')">
+                    Buy via WhatsApp
+                </button>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product-card">
+                <img src="https://via.placeholder.com/300x350/222/FFF?text=Streetwear+Cargo" alt="Cargo Pants" class="product-img">
+                <h3 class="product-title">Streetwear Cargo Pants</h3>
+                <div class="product-price">₹1,199</div>
+                
+                <div class="size-selector">
+                    <label>Size:</label>
+                    <select id="size3">
+                        <option>30</option>
+                        <option>32</option>
+                        <option>34</option>
+                    </select>
+                </div>
+
+                <button class="buy-btn" onclick="orderOnWhatsApp('Streetwear Cargo Pants', '1199', 'size3')">
+                    Buy via WhatsApp
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        &copy; 2026 AJ Store (Arhaan & Jibran). All Rights Reserved.
+    </footer>
+
+    <!-- WhatsApp Order Script -->
+    <script>
+        // Yahan apna WhatsApp Number likhein (Country Code 91 ke saath)
+        const myPhoneNumber = "919000000000"; 
+
+        function orderOnWhatsApp(productName, price, sizeSelectId) {
+            const selectedSize = document.getElementById(sizeSelectId).value;
+            const message = `Hello AJ Store! 👋%0AI want to buy:%0A- *Product:* ${productName}%0A- *Size:* ${selectedSize}%0A- *Price:* ₹${price}%0APlease let me know the payment details!`;
+            
+            window.open(`https://wa.me/${myPhoneNumber}?text=${message}`, '_blank');
+        }
+    </script>
+</body>
+</html>
